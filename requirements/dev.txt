@@ -1,0 +1,28 @@
+-r base.txt
+-r deploy.txt
+django-debug-toolbar==1.2.1
+django-extensions==1.4.4
+django-webtest==1.7.7
+ecdsa==0.11
+ipdb==0.8
+ipython==2.2.0
+Jinja2==2.7.3
+MarkupSafe==0.23
+mock==1.0.1
+model-mommy==1.2.2
+nose==1.3.4
+paramiko==1.15.1
+pip-tools==0.3.5
+pudb==2014.1
+pycrypto==2.6.1
+pyflakes==0.8.1
+Pygments==1.6
+pyinotify==0.9.4
+PyYAML==3.11
+requests==2.4.1
+sqlparse==0.1.12
+urwid==1.2.1
+waitress==0.8.9
+webassets==0.10
+WebOb==1.4
+WebTest==2.0.16

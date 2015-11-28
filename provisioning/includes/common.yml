@@ -1,0 +1,37 @@
+# includes/common.yml
+---
+
+- name: Update cache
+  sudo: yes
+  apt: update_cache=yes
+
+# Admin packages
+- name: Install admin packages
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+   - aptitude
+   - htop
+   - ncdu
+   - mosh
+
+# git packages
+- name: Install git
+  sudo: yes
+  apt: name=git-core
+
+# Postgres Client
+- name: Install postgres client
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+    - libpq-dev
+    - postgresql-client
+
+# Python
+- name: Install Python
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+   - python-dev
+   - virtualenvwrapper

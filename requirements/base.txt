@@ -1,0 +1,16 @@
+django-admin-bootstrapped==2.0.4
+django-autoslug==1.7.2
+django-floppyforms==1.4.1
+django-leaflet==0.16.0
+django-markdown==0.8.4
+django-model-utils==2.2
+django-pipeline-forgiving==1.0.0
+django-pipeline==1.3.25
+django-settings-context-processor==0.2
+django-storages==1.1.8
+Django==1.8
+Pillow==2.8.1
+psycopg2==2.5.4
+python-dateutil==2.2
+pytz==2014.10
+six==1.8.0

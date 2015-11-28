@@ -1,0 +1,13 @@
+# includes/geo.yml
+---
+- name: add ubuntugis ppa
+  sudo: yes
+  apt_repository: repo='ppa:ubuntugis/ubuntugis-unstable'
+
+- name: install geo packages
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+    - proj-bin
+    - libgeos-3.4.2
+    - gdal-bin
