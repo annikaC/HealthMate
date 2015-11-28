@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'leaflet',
     'floppyforms',
     'storages',
+    'djgeojson',
 
     # Local apps
     'healthmate',
@@ -140,7 +141,6 @@ LEAFLET_CONFIG = {
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 18,
     'RESET_VIEW': False,
-    'NO_GLOBALS': False,
 }
 
 if DEBUG:

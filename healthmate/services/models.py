@@ -16,7 +16,8 @@ class Service(geo_models.Model):
 
     SERVICE_TYPE = Choices(('hospital', _('Hospital')),
                        ('other', _('Other')), )
-    generation_type = models.CharField(choices=SERVICE_TYPE,
+    generation_type = models.CharField(_("Service Type"),
+                                       choices=SERVICE_TYPE,
                                        default=SERVICE_TYPE.hospital,
                                        max_length=100)
     slug = AutoSlugField(
