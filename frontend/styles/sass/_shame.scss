@@ -3,3 +3,51 @@
  * Add quick changes here, to be incorperated properly at a later point
  */
 
+.content-wrapper{
+    width: auto;
+    max-width: rem(600);
+    margin: auto;
+}
+
+.contenthead{
+    &-title{
+
+    }
+}
+
+.catlist{
+    margin: 0;
+    list-style: none;
+    &-item{
+        margin: 0;
+        a{
+            @include pos(r);
+            display: block;
+            padding: rem(10 20);
+            border-bottom: rem(1) solid color(muted);
+            color: color(default);;
+            text-decoration: none;
+            &:after{
+                @include pos(a, t1rem r2rem);
+                @include setsize(1.5em);
+                content:'>';
+                display: block;
+                border-radius: 100%;
+                color: color(white);
+                background: color(link);
+                line-height: 1.5em;
+                text-align: center;
+                transition: transform .2s ease;
+            }
+            &:hover{
+                color: color(link);
+                &:after{
+                    transform: translateX(1rem);
+                }
+            }
+        }
+        &:last-child a{
+            border-bottom: none;
+        }
+    }
+}
