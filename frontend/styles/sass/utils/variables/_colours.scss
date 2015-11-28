@@ -26,6 +26,8 @@ $red: #aa3025;
 // @type Color
 $supportmessage: #FFE04E;
 
+$blush: #B30536;
+
 /// Colors map tying usage to variable names
 /// @type Map
 $colors: (
@@ -34,7 +36,7 @@ $colors: (
     white: $white,
     muted: lighten($black,50%),
     highlight: $yellow,
-    link: $red,
-    linkactive: $red,
+    link: $blush,
+    linkactive: $blush,
     supportmessage: $supportmessage,
 );

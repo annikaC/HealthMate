@@ -1,4 +1,8 @@
 extend templates/master
 
 block pagecontent
-    p Hello
+    .contenthead
+        h2.contenthead-title What's wrong?
+    ul.catlist
+        -for(i=0;i<10;i++)
+            li.catlist-item: a(href="") Item #{i}
