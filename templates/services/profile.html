@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles leaflet_tags django_markdown %}
+
+{% block content %}
+<h1>{{ service }}</h1>
+{{ service.content|markdown }}
+<div class="section">
+  <div class="gen-map">
+    <script type="text/javascript">
+        function map_init_basic (map, options) {
+            var pos = [{{ service.location.y }}, {{ service.location.x }}]
+            map.setView(pos, 8);
+            map.scrollWheelZoom.disable();
+            map.touchZoom.disable();
+            map.dragging.disable();
+            L.marker(pos).addTo(map);
+        }
+    </script>
+    {% leaflet_map "location_map" callback="window.map_init_basic" %}
+  </div>
+</div>
+{% endblock %}

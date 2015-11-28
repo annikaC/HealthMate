@@ -1,0 +1,32 @@
+# includes/project.yml
+---
+
+- name: Create the virtualenv
+  shell: >
+    source /etc/bash_completion.d/virtualenvwrapper
+    && virtualenv {{ project_venv }}
+    && source {{ project_venv }}/bin/activate
+    && setvirtualenvproject
+  args:
+    chdir: '{{ project_src }}'
+    creates: '{{ project_venv }}/.project'
+    executable: /bin/bash
+
+- name: Install python requirements
+  pip: >
+    chdir='{{ project_src }}'
+    requirements='{{ pip_requirements }}'
+    virtualenv='{{ project_venv }}'
+
+# Node
+- name: Install Node dependencies
+  sudo: yes
+  apt: name=python-apt  # Required by apt_repository
+
+- name: Add Node PPA
+  sudo: yes
+  apt_repository: repo='ppa:chris-lea/node.js'
+
+- name: Install node
+  sudo: yes
+  apt: name=nodejs

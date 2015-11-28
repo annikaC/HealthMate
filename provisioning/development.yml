@@ -1,0 +1,75 @@
+---
+
+- hosts: default
+
+  vars:
+    locale: en_GB.UTF-8
+    project_name: healthmate
+    project_owner: vagrant
+    project_src: /vagrant/
+    project_venv: /home/vagrant/.virtualenvs/healthmate
+    pip_requirements: requirements/dev.txt
+    db_user: vagrant
+    db_name: vagrant
+
+  tasks:
+    - include: includes/common.yml
+    - include: includes/project.yml
+
+    # Postgres Server
+    - name: Install postgres server
+      sudo: yes
+      apt: name={{ item }}
+      with_items:
+        - postgresql-9.3-postgis-2.1
+        - postgresql-contrib
+        - python-psycopg2  # Required by postgresql_user and postgresql_db
+
+    - include: includes/geo.yml
+
+    # Ubuntu complains about invalid locale, so manually generate it.
+    - name: Generate locales
+      sudo: yes
+      command: locale-gen '{{ locale }}'
+
+    - name: set locale to {{ locale }}
+      sudo: yes
+      command:
+        "/usr/sbin/update-locale LANG='{{ locale }}' LC_ALL='{{ locale }}'"
+
+    # Remove chef
+    - name: Remove unused packages
+      sudo: yes
+      apt: name=chef purge=yes state=absent
+
+    # Database
+    - name: Create PostgreSQL user
+      sudo: yes
+      sudo_user: postgres
+      postgresql_user: name={{ db_user }} role_attr_flags=CREATEDB,SUPERUSER
+
+    - name: Create database
+      sudo: yes
+      sudo_user: postgres
+      postgresql_db: name={{ db_name }} owner={{ db_user }}
+
+    - name: ensure postgis_extension is installed
+      sudo: yes
+      sudo_user: postgres
+      command: psql -d {{ db_name }} -c 'CREATE EXTENSION IF NOT EXISTS postgis;'
+
+    - name: Add alias for invoke
+      lineinfile: >
+        dest=~/.bash_aliases
+        line="alias invoke='invoke --pty'"
+        create=yes
+        state=present
+
+    - name: Set environment variables
+      lineinfile: >
+        dest=~/.bash_profile
+        line="{{ item }}"
+        state=present
+        create=yes
+      with_items:
+        - export DEBUG=True
