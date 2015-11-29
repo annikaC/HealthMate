@@ -9,11 +9,8 @@ html{
     font-size: fontbase($remsize-base,16);
 }
 body{
-    @include font(fontbase($fontsize-base) 1.5em, default);
+    @include font(fontbase($fontsize-base) 1.5, default);
     color: color(default);
-}
-p,li,dt,dd,input,textarea,button{
-    line-height: 1.5em;
 }
 
 /**
