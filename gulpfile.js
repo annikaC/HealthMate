@@ -7,26 +7,22 @@
 // Include dependancies
 var
     gulp = require('gulp'),
-    data = require('gulp-data'),
     sass = require('gulp-ruby-sass'),
-    jade = require('gulp-jade'),
     autoprefixer = require('gulp-autoprefixer'),
     cmq = require('gulp-combine-media-queries')
 ;
 
 // Define static assets
 var
-    root = './static/',
+    root = 'static/',
     assets = {
-        markup: root + 'markup/',
-        styles: root + 'styles/',
-        scripts: root + 'scripts/'
+        styles: root + '/styles/'
     }
 ;
 
 // Styles
 gulp.task('styles', function(){
-    return sass(assets.styles + 'sass/',{
+    return sass('static/styles/sass/',{
         style: 'compressed',
         noCache: true
     })
@@ -36,33 +32,16 @@ gulp.task('styles', function(){
     .pipe(cmq({
         log: true
     }))
-    .pipe(gulp.dest(assets.styles));
-});
-
-// Markup
-gulp.task('markup', function() {
-  return gulp.src(assets.markup + 'jade/*.jade')
-    .pipe(
-        data(function(file) {
-            return require('./' + assets.markup + 'jade/locals.json');
-        })
-    )
-    .pipe(jade({
-        pretty: true
-    }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('static/styles/'));
 });
 
 // Watch
 gulp.task('watch',function(){
-    gulp.watch(assets.scripts + '**/*.js',['markup']);
-    gulp.watch(assets.styles + '**/*.scss',['styles']);
-    gulp.watch(assets.markup + '**/*.jade',['markup']);
+    gulp.watch('static/styles/sass/**/*.scss',['styles']);
 });
 
 // Default
 gulp.task('default', [
     'styles',
-    'markup',
     'watch'
 ]);
