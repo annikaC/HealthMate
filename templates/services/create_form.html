@@ -1,15 +1,12 @@
-{% load leaflet_tags %}
-<html>
-  <head>
-   {% leaflet_js plugins="forms" %}
-   {% leaflet_css plugins="forms" %}
-  </head>
-  <body>
-    <h1>Add new service</h1>
+{% extends "base.html" %}
+{% load staticfiles django_markdown leaflet_tags %}
+{% block content %}
+    <div class="contenthead">
+        <h2 class="contenthead-title">Add a service</h2>
+    </div>
     <form method="POST" action="">
         {% csrf_token %}
         {{ form }}
         <input type="submit"/>
     </form>
-  </body>
-</html>
+{% endblock %}
