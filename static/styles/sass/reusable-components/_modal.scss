@@ -7,8 +7,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    background: fade-out(black,.5);
+    display: none;
+    background: fade-out(black,.3);
+    &.is--active{
+        display: flex;
+    }
 
     &-content{
         position: relative;

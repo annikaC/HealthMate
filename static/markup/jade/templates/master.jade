@@ -12,8 +12,9 @@ head
     title= locals.projectinfo.title + ' - ' + locals.projectinfo.tagline
     link(rel="stylesheet" href="/styles/styles.css")
     script(src="/scripts/jquery.js")
-    script(src="/scripts/app.js")
 body(class=viewclass)
     include ../partials/header
     main(role="main").page-content.content-wrapper
         block pagecontent
+    block modal
+    script(src="/scripts/app.js")

@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>healthmate</title>
+    <link rel="stylesheet" href="{% static "styles/styles.css" %}" />
     {% leaflet_js %}
     {% leaflet_css %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -14,9 +15,16 @@
 
   <body>
     {% block header %}
+        <header role="banner" class="page-header">
+            <div class="content-wrapper">
+                <a href="/" class="site-logo">Health Mate</a>
+            </div>
+        </header>
     {% endblock %}
-
-    {% block content %}{% endblock %}
+    <main role="main" class="page-content content-wrapper">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     {% block footer %}
     {% endblock %}

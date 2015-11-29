@@ -3,7 +3,9 @@ extend templates/master
 block pagecontent
     .contenthead
         h2.contenthead-title Form
-    .modal
+        a.modal-trigger(href="#form") Invoke form
+block modal
+    .modal#modal
         .modal-content
             button.btn.btn--quiet.modal-close x
             form

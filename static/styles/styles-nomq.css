@@ -618,10 +618,14 @@ tfoot td {
 	position: fixed;
 	top: 0;
 	left: 0;
+	display: none;
+	background: rgba(0,0,0,0.7);
+}
+
+.modal.is--active {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	background: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -689,9 +693,10 @@ head {
 	cursor: pointer;
 }
 
-.btn--inverse {
+.btn--quiet {
+	border: 0.1rem solid gray;
 	background: transparent;
-	color: #B30536;
+	color: #333;
 }
 
 .catlist {
