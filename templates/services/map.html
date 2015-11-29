@@ -8,9 +8,9 @@
 
         function onEachFeature(feature, layer) {
             if (feature.properties && feature.properties.popupContent) {
-              layer.bindPopup(feature.properties.popupContent);
+                layer.bindPopup(feature.properties.popupContent);
+                layer._popup.options.minWidth = 300;
             }
-            console.log(feature.properties);
         }
 
         function main_map_init (map, options) {

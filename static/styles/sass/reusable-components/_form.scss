@@ -10,6 +10,9 @@ form{
         margin-left: -2rem;
         padding: 1rem 2rem;
         border-top: .1rem solid #ccc;
+        &:first-of-type{
+            border-top: none;
+        }
     }
     input[type="submit"]{
         margin-top: 3rem;
@@ -21,12 +24,36 @@ form{
     display: block;
     min-height: 1.5em;
     margin: 2rem 0;
-    padding-left: 3rem;
     &:before{
-        @include pos(a,t0 l0);
         content: '\f05a';
-        color: color(link);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: .25em;
+        color: color(calm);
         font-size: 1.5em;
         font-family: 'FontAwesome', sans-serif;
+    }
+}
+.errorlist{
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    li{
+        @include font(small);
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: color(link);
+        &:before{
+            content: '\f06a';
+            display: inline-block;
+            margin-right: .5em;
+            color: color(link);
+            font-family: 'FontAwesome', sans-serif;
+        }
+    }
+    + input,
+    + select,
+    + textarea{
+        border-color: color(link);
     }
 }

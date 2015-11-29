@@ -5,10 +5,14 @@
 .page-header{
     background:
         linear-gradient(
-            to bottom,
-            color(link),
-            lighten(color(link),1%)
+            45deg,
+            color(link) 48%,
+            lighten(color(link),5%) 48%,
+            lighten(color(link),5%) 52%,
+            color(link) 52%
         )
+        repeat
+        top left/2rem 2rem
         color(link);
     .content-wrapper{
         padding-top: 2rem;
