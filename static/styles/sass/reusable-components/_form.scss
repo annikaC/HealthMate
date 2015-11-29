@@ -9,7 +9,23 @@ form{
         margin-right: -2rem;
         margin-left: -2rem;
         padding: 1rem 2rem;
-        border-top: .1rem solid #ccc;
+        &:after{
+            content:' ';
+            display: block;
+            height: .3rem;
+            margin: 1rem -2rem 0;
+            background:
+                linear-gradient(
+                    45deg,
+                    transparent 48%,
+                    color(muted) 48%,
+                    color(muted) 52%,
+                    transparent 52%
+                )
+                repeat
+                top left/.3rem .3rem
+            ;
+        }
         &:first-of-type{
             border-top: none;
         }

@@ -736,8 +736,13 @@ form > br {
 form label {
   margin-right: -2rem;
   margin-left: -2rem;
-  padding: 1rem 2rem;
-  border-top: .1rem solid #ccc; }
+  padding: 1rem 2rem; }
+  form label:after {
+    content: ' ';
+    display: block;
+    height: .3rem;
+    margin: 1rem -2rem 0;
+    background: linear-gradient(45deg, transparent 48%, gray 48%, gray 52%, transparent 52%) repeat top left/0.3rem 0.3rem; }
   form label:first-of-type {
     border-top: none; }
 form input[type="submit"] {
@@ -861,7 +866,8 @@ body {
  * Page header
  */
 .page-header {
-  background: linear-gradient(45deg, #B30536 48%, #cc063d 48%, #cc063d 52%, #B30536 52%) repeat top left/2rem 2rem #B30536; }
+  background: linear-gradient(45deg, #B30536 48%, #cc063d 48%, #cc063d 52%, #B30536 52%) repeat top left/2rem 2rem #B30536;
+  box-shadow: inset 0 -0.5rem 1rem #a90533; }
   .page-header .content-wrapper {
     padding-top: 2rem;
     padding-bottom: 2rem; }
@@ -888,7 +894,9 @@ body {
 .page-footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #2E6D80; }
+  background-color: #2E6D80;
+  box-shadow: inset 0 0.25rem #2b6778;
+  text-align: center; }
   .page-footer p,
   .page-footer a,
   .page-footer a:hover {
@@ -955,8 +963,15 @@ input[type="submit"] {
         margin: 0 1rem; } }
 
 .contenthead {
-  margin-bottom: 3rem;
   text-align: center; }
+  .contenthead:after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    max-width: 30rem;
+    height: .5rem;
+    margin: 2rem auto 3rem;
+    background: linear-gradient(45deg, transparent 48%, #B30536 48%, #B30536 52%, transparent 52%) repeat top left/0.5rem 0.5rem; }
   .contenthead > * {
     margin: 0; }
   .contenthead-title {
@@ -964,6 +979,11 @@ input[type="submit"] {
     font-size: 1.5em; }
     .contenthead-title + .contenthead-intro {
       padding-top: 1rem; }
+  .contenthead-intro {
+    width: auto;
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto; }
 
 .catlist {
   margin: 0;
