@@ -45,7 +45,7 @@ class ServiceProfileView(DetailView):
 class ServicesView(TemplateView):
 
     """A view for services around your location."""
-    template_name = "home.html"
+    template_name = "services/map.html"
     settings_overrides = {
         'MIN_ZOOM': 3,
         'MAX_ZOOM': 18,
