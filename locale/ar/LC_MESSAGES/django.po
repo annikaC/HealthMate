@@ -60,3 +60,6 @@ msgstr ""
 #: templates/home.html:10
 msgid "Add a service"
 msgstr ""
+
+msgid "Parent Category"
+msgstr ""
