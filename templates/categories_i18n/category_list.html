@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if object_list %}
+    <ul class="catlist">
+      {% for object in object_list %}
+        <li class="catlist-item"><a class="fontawesome-chevron-right" href="{% url 'category_detail' id=object.id %}">{{ object }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}
+

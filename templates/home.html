@@ -6,7 +6,7 @@
         <p class="contenthead-intro">Find and recommend local health support services for you, your family and other refugees.</p>
     </div>
     <ul class="gate">
-        <li class="gate-route"><a href="" class="btn fontawesome-search">Find a service</a></li>
+        <li class="gate-route"><a href="{% url 'categories_list' %}" class="btn fontawesome-search">Find a service</a></li>
         <li class="gate-route"><a href="{% url 'services:create_service' %}" class="btn fontawesome-plus">Add a service</a></li>
     </ul>
 {% endblock %}
