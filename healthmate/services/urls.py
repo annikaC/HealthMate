@@ -1,14 +1,10 @@
 """URLs for services."""
 
-from django.conf import settings
 from django.conf.urls import include, url
 
-from . import views
+from .views import ServiceFormView
 
-service_urls = [
-    url(r"^$", views.ServiceProfileView.as_view(), name="profile"),
-]
 
 urlpatterns = [
-    url(r"^(?P<slug>[^/]+)/", include(service_urls)),
+    url(r'^new/$', ServiceFormView.as_view(), name='create_service'),
 ]
