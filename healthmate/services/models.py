@@ -7,15 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from autoslug import AutoSlugField
 from django_markdown.models import MarkdownField
-from model_utils import Choices
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=300)
-
-    def __unicode__(self):
-        """Return name representation for service."""
-        return self.name
+from categories_i18n.models import Category
 
 
 class Service(geo_models.Model):

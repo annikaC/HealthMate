@@ -4,7 +4,7 @@ from django.contrib.admin import site
 
 from leaflet.admin import LeafletGeoAdmin
 
-from .models import Category, Service, ServiceImage
+from .models import Service, ServiceImage
 
 
 class ServiceImageInline(admin.TabularInline):
@@ -24,4 +24,3 @@ class ServiceAdmin(LeafletGeoAdmin, admin.ModelAdmin):
 
 
 site.register(Service, ServiceAdmin)
-site.register(Category)
