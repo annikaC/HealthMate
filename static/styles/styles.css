@@ -949,6 +949,16 @@ body {
   padding-right: 2rem;
   padding-left: 2rem; }
 
+.lang-ar li,
+.lang-ar p,
+.lang-ar a,
+.lang-ar input,
+.lang-fa li,
+.lang-fa p,
+.lang-fa a,
+.lang-fa input {
+  direction: rtl; }
+
 .marginless {
   margin-bottom: 0; }
 

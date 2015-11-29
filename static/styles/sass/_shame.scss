@@ -11,6 +11,15 @@
     padding-right: 2rem;
     padding-left: 2rem;
 }
+.lang-ar,
+.lang-fa{
+    li,
+    p,
+    a,
+    input{
+        direction: rtl;
+    }
+}
 
 .marginless{
     margin-bottom: 0;
