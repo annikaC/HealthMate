@@ -12,4 +12,7 @@
     a:hover{
         color: color(white);
     }
+    [class*="fontawesome-"]:before{
+        margin-right: .5em;
+    }
 }

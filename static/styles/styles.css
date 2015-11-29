@@ -931,6 +931,8 @@ body {
   .page-footer a,
   .page-footer a:hover {
     color: #fff; }
+  .page-footer [class*="fontawesome-"]:before {
+    margin-right: .5em; }
 
 /**
  * Bespoke page layout template
