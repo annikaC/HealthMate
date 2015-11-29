@@ -3,6 +3,7 @@
 {% block content %}
 <div class="contenthead">
     <h1 class="contenthead-title">{{ title }}</h1>
+    <a href="{% url 'categories_list' %}" class="back fontawesome-chevron-left">Back to services</a>
 </div>
 
 {% leaflet_map "main" callback="main_map_init" settings_overrides=view.settings_overrides %}
@@ -23,11 +24,23 @@
                 // Add GeoJSON layer
                 L.geoJson(data, {onEachFeature: onEachFeature}).addTo(map);
             });
+            leafletImage(map, function(err, canvas) {
+                // now you have canvas
+                // example thing to do with that canvas:
+                var img = document.createElement('img');
+                var dimensions = map.getSize();
+                img.width = dimensions.x;
+                img.height = dimensions.y;
+                img.src = canvas.toDataURL();
+                document.getElementById('mapdownload').href = img.src;
+            });
         }
+
+
 
     </script>
 
 <div class="center">
-    <a href="{% url 'categories_list' %}" class="btn fontawesome-search">Find another service</a>
+    <a class="btn fontawesome-cloud-download" id="mapdownload">Download map</a>
 </div>
 {% endblock %}

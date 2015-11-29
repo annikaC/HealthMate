@@ -931,7 +931,7 @@ input[type="submit"] {
   display: inline-block;
   padding: 1em;
   border: none;
-  border-radius: .25rem;
+  border-radius: .5rem;
   background: #B30536;
   color: #fff;
   text-decoration: none;
@@ -994,6 +994,12 @@ input[type="submit"] {
     max-width: 60rem;
     margin-right: auto;
     margin-left: auto; }
+
+.back {
+  font-size: 0.75em;
+  text-decoration: none; }
+  .back:before {
+    margin-right: .5em; }
 
 .catlist {
   width: 100%;

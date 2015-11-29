@@ -18,7 +18,7 @@
     display: inline-block;
     padding: 1em;
     border: none;
-    border-radius: .25rem;
+    border-radius: .5rem;
     background: color(link);
     color: color(white);
     text-decoration: none;
@@ -105,6 +105,14 @@
         max-width: 60rem;
         margin-right: auto;
         margin-left: auto;
+    }
+}
+
+.back{
+    @include font(small);
+    text-decoration: none;
+    &:before{
+        margin-right: .5em;
     }
 }
 
