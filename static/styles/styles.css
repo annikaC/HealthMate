@@ -883,10 +883,33 @@ body {
     height: 4rem;
     display: block;
     overflow: hidden;
-    margin: auto;
+    margin: 0 auto .5rem;
     background: url("../images/logo.svg") no-repeat center center/contain transparent;
     text-indent: 100%;
     white-space: nowrap; }
+    @media (min-width: 50em) {
+      .site-logo {
+        margin-bottom: 0; } }
+
+  .languagechooser {
+    display: flex;
+    width: 20rem;
+    height: 4rem;
+    margin: auto; }
+    .languagechooser select {
+      flex: 2 1;
+      margin: auto .5rem auto 0; }
+    .languagechooser input[type="submit"] {
+      font-size: 0.75em;
+      flex: auto 1 2rem;
+      margin: auto;
+      padding: .5em;
+      background: #9a042f; }
+    @media (min-width: 50em) {
+      .languagechooser {
+        position: absolute;
+        top: 2rem;
+        right: 2rem; } }
 
 /**
  * Page content
@@ -917,6 +940,7 @@ body {
  * Add quick changes here, to be incorperated properly at a later point
  */
 .content-wrapper {
+  position: relative;
   width: auto;
   max-width: 100rem;
   margin: auto;
