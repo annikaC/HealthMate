@@ -2,10 +2,9 @@
 {% load staticfiles leaflet_tags django_markdown %}
 {% block content %}
 {% leaflet_map "main" callback="main_map_init" settings_overrides=view.settings_overrides %}
-
     <script type="text/javascript">
         function main_map_init (map, options) {
-            var dataurl = '{% url "data" %}';
+            var dataurl = '{% url "data" id=id %}';
             // Download GeoJSON via Ajax
             $.getJSON(dataurl, function (data) {
                 // Add GeoJSON layer
