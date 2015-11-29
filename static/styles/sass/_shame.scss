@@ -108,6 +108,14 @@
     }
 }
 
+.back{
+    @include font(small);
+    text-decoration: none;
+    &:before{
+        margin-right: .5em;
+    }
+}
+
 .catlist{
     width: 100%;
     max-width: 60rem;

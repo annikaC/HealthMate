@@ -995,6 +995,12 @@ input[type="submit"] {
     margin-right: auto;
     margin-left: auto; }
 
+.back {
+  font-size: 0.75em;
+  text-decoration: none; }
+  .back:before {
+    margin-right: .5em; }
+
 .catlist {
   width: 100%;
   max-width: 60rem;
