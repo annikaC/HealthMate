@@ -61,4 +61,5 @@ target/
 
 node_modules/
 static/components/
+static/*.html
 .vagrant

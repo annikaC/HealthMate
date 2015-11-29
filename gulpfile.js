@@ -11,8 +11,7 @@ var
     sass = require('gulp-ruby-sass'),
     jade = require('gulp-jade'),
     autoprefixer = require('gulp-autoprefixer'),
-    cmq = require('gulp-combine-media-queries'),
-    connect = require('gulp-connect')
+    cmq = require('gulp-combine-media-queries')
 ;
 
 // Define static assets
@@ -54,14 +53,6 @@ gulp.task('markup', function() {
     .pipe(gulp.dest('./'));
 });
 
-// Server
-gulp.task('server', function(){
-    connect.server({
-        port: 3000,
-        root: './'
-    });
-});
-
 // Watch
 gulp.task('watch',function(){
     gulp.watch(assets.scripts + '**/*.js',['markup']);
@@ -74,5 +65,4 @@ gulp.task('default', [
     'styles',
     'markup',
     'watch'
-    //'server'
 ]);
