@@ -931,7 +931,7 @@ input[type="submit"] {
   display: inline-block;
   padding: 1em;
   border: none;
-  border-radius: .25rem;
+  border-radius: .5rem;
   background: #B30536;
   color: #fff;
   text-decoration: none;
