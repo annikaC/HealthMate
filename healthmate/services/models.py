@@ -10,16 +10,19 @@ from django_markdown.models import MarkdownField
 from model_utils import Choices
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=300)
+
+    def __unicode__(self):
+        """Return name representation for service."""
+        return self.name
+
+
 class Service(geo_models.Model):
 
     """The service model."""
 
-    SERVICE_TYPE = Choices(('hospital', _('Hospital')),
-                       ('other', _('Other')), )
-    generation_type = models.CharField(_("Service Type"),
-                                       choices=SERVICE_TYPE,
-                                       default=SERVICE_TYPE.hospital,
-                                       max_length=100)
+    categories = models.ManyToManyField(Category)
     slug = AutoSlugField(
         populate_from='name', max_length=30, unique=True, editable=False,
         always_update=True)

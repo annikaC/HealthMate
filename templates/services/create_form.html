@@ -1,0 +1,15 @@
+{% load leaflet_tags %}
+<html>
+  <head>
+   {% leaflet_js plugins="forms" %}
+   {% leaflet_css plugins="forms" %}
+  </head>
+  <body>
+    <h1>Add new service</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit"/>
+    </form>
+  </body>
+</html>
