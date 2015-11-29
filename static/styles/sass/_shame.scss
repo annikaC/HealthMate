@@ -11,15 +11,6 @@
     padding-right: 2rem;
     padding-left: 2rem;
 }
-.lang-ar,
-.lang-fa{
-    li,
-    p,
-    a,
-    input{
-        direction: rtl;
-    }
-}
 
 .marginless{
     margin-bottom: 0;
@@ -131,6 +122,16 @@
     max-width: 60rem;
     margin: auto;
     list-style: none;
+    .lang-ar &,
+    .lang-fa &{
+        direction: rtl;
+        a{
+            padding-right: 8rem;
+            &:after{
+                margin-right: -8rem;
+            }
+        }
+    }
     &-item{
         margin: 0;
         a{

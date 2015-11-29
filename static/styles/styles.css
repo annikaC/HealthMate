@@ -949,16 +949,6 @@ body {
   padding-right: 2rem;
   padding-left: 2rem; }
 
-.lang-ar li,
-.lang-ar p,
-.lang-ar a,
-.lang-ar input,
-.lang-fa li,
-.lang-fa p,
-.lang-fa a,
-.lang-fa input {
-  direction: rtl; }
-
 .marginless {
   margin-bottom: 0; }
 
@@ -1042,6 +1032,12 @@ input[type="submit"] {
   max-width: 60rem;
   margin: auto;
   list-style: none; }
+  .lang-ar .catlist, .lang-fa .catlist {
+    direction: rtl; }
+    .lang-ar .catlist a, .lang-fa .catlist a {
+      padding-right: 8rem; }
+      .lang-ar .catlist a:after, .lang-fa .catlist a:after {
+        margin-right: -8rem; }
   .catlist-item {
     margin: 0; }
     .catlist-item a {
