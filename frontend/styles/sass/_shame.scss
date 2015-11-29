@@ -15,7 +15,8 @@
     background: color(link);
     color: color(white);
     cursor: pointer;
-    &--inverse{
+    &--quiet{
+        border: .1rem solid color(muted);
         background: transparent;
         color: color(link);
     }
