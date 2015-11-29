@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-29 15:27+0000\n"
+"POT-Creation-Date: 2015-11-29 17:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: healthmate/services/models.py:22
 msgid "Service Name"
-msgstr "Nombre del Servicio"
+msgstr ""
 
 #: healthmate/services/models.py:23
 msgid "This name will be used to identify your service."
@@ -30,10 +31,32 @@ msgstr ""
 msgid "Represented as (longitude, latitude)"
 msgstr ""
 
-#: templates/home.html:8
-msgid "Find a service"
+#: healthmate/settings.py:110
+msgid "English"
+msgstr ""
+
+#: healthmate/settings.py:111
+msgid "Arabic"
+msgstr ""
+
+#: healthmate/settings.py:112
+msgid "Farsi"
+msgstr ""
+
+#: templates/home.html:5
+msgid "Your healthmate"
+msgstr ""
+
+#: templates/home.html:6
+msgid ""
+"Find and recommend local health support services for you, your family and "
+"other refugees."
 msgstr ""
 
 #: templates/home.html:9
+msgid "Find a service"
+msgstr ""
+
+#: templates/home.html:10
 msgid "Add a service"
-msgstr "Añadir Un Servicio"
+msgstr ""

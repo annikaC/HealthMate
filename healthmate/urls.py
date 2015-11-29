@@ -13,6 +13,7 @@ from services.views import ServicesView, ServiceJSONLayer
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^$', TemplateView.as_view(template_name='home.html'), name='home'),
     url(r'^data.geojson/(?P<id>\d+)$', ServiceJSONLayer.as_view(model=Service,
                                                     properties=('name', 'categories', 'additional_info', 'popupContent',),
