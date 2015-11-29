@@ -778,6 +778,11 @@ form input[type="submit"] {
   .errorlist + textarea {
     border-color: #B30536; }
 
+#id_location_map {
+  overflow: hidden;
+  border: 0.2rem solid #2E6D80;
+  border-radius: .5rem; }
+
 /**
  * Modal
  */
