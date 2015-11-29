@@ -788,6 +788,12 @@ table {
 head {
   font-family: '{""grain"": "(min-width:12.5em)",""pebble"": "(min-width:25em)",""mountain"": "(min-width:50em)",""eagleeyes"": "(min-device-pixel-ratio:2) and (min-resolution:192dpi)",""-webkit-eagleeyes"": "(-webkit-min-device-pixel-ratio:2) and (-webkit-min-resolution:192dpi)"}'; }
 
+html {
+  background: gray; }
+
+body {
+  background: #fff; }
+
 /**
  * Page header
  */
