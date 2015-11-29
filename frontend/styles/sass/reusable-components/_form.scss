@@ -1,0 +1,23 @@
+/**
+ * Form
+ */
+
+.fieldgroup{
+    margin-bottom: 2rem;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    > label{
+        display: block;
+        margin: 0;
+    }
+    &-label{
+        display: block;
+        margin-bottom: .5em;
+        font-weight: bold;
+    }
+    &-input{
+        width: 100%;
+    }
+}
+

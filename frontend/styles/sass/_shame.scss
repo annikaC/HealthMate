@@ -9,6 +9,18 @@
     margin: auto;
 }
 
+.btn{
+    border: none;
+    border-radius: .25rem;
+    background: color(link);
+    color: color(white);
+    cursor: pointer;
+    &--inverse{
+        background: transparent;
+        color: color(link);
+    }
+}
+
 .contenthead{
     &-title{
 

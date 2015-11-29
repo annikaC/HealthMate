@@ -1,0 +1,34 @@
+/**
+ * Modal
+ */
+.modal{
+
+    @include setsize(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: fade-out(black,.5);
+
+    &-content{
+        position: relative;
+        width: 100%;
+        max-width: rem(600);
+        margin: auto;
+        padding: 3rem;
+        border-radius: 1rem;
+        background: color(white);
+        > :last-child{
+            margin-bottom: 0;
+        }
+    }
+    &-close{
+        @include pos(a,t1rem r1rem 1);
+        @include setsize(3rem);
+        display: block;
+        padding: 0;
+        background: transparent;
+        color: color(link);
+        line-height: 3rem;
+    }
+}

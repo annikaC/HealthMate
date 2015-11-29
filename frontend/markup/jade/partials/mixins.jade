@@ -1,0 +1,15 @@
+// Fieldgroup
+mixin fieldgroup(name, label, type)
+    .fieldgroup
+        label(for=name)
+            span.fieldgroup-label= label
+            -if(type === 'select')
+                select.fieldgroup-input(id=name, name=name)
+                    block
+            -else if(type === 'multiselect')
+                select.fieldgroup-input(id=name, name=name multiple)
+                    block
+            -else if(type === 'textarea')
+                textarea.fieldgroup-input(id=name, name=name)
+            -else
+                input.fieldgroup-input(id=name, name=name)

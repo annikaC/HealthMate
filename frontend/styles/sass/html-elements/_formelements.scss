@@ -2,10 +2,6 @@
  * Form elements
  */
 
-.fieldgroup{
-    margin-bottom: 2rem;
-}
-
 form{
 	position: relative;
 	margin: 0 0 1em 0;
@@ -16,9 +12,7 @@ form{
     		border: none;
     	}
     	legend{
-    		margin: 0 0 .5em 0;
-    		padding: 0;
-    		font-size: 1;
+            @extend %hide;
     	}
     	label{
     		display: inline-block;
@@ -34,13 +28,15 @@ form{
     		color: color(default);
     	}
         input,
-        textarea{
+        textarea,
+        select[multiple]{
             padding: 10px 15px;
             border: 1px solid color(muted);
-            border-radius: 0;
+            border-radius: .5rem;
         }
         input:not([type="radio"]):not([type="checkbox"]):not([type="range"]),
         textarea{
+            min-height: 25rem;
             -webkit-appearance: none;
         }
     	input[type="checkbox"],

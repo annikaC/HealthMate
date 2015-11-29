@@ -1,0 +1,16 @@
+extend templates/master
+
+block pagecontent
+    .contenthead
+        h2.contenthead-title Form
+    .modal
+        .modal-content
+            button.btn.btn--inverse.modal-close x
+            form
+                fieldset
+                    legend Details
+                    +fieldgroup('service', 'Select service', 'multiselect')
+                        -for(i=0;i<8;i++)
+                            option option #{i}
+                    +fieldgroup('notes', 'Add some notes', 'textarea')
+
