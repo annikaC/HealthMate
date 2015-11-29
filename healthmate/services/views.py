@@ -1,6 +1,7 @@
 """Views for services."""
 
 from django.views.generic import DetailView, TemplateView, CreateView
+from django.utils.translation import ugettext as _
 
 from categories_i18n.models import Category
 from djgeojson.views import GeoJSONLayerView
@@ -34,6 +35,12 @@ class ServicesView(TemplateView):
         'MAX_ZOOM': 18,
         'RESET_VIEW': False,
     }
+
+    def get_context_data(self, **kwargs):
+        context = super(ServicesView, self).get_context_data(**kwargs)
+        category_title = Category.objects.get(pk=self.kwargs.get('id'))
+        context['title'] = _(category_title.title)
+        return context
 
 
 class ServiceFormView(CreateView):

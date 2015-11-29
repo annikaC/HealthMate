@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles leaflet_tags django_markdown %}
 {% block content %}
+<div class="contenthead">
+    <h1 class="contenthead-title">{{ title }}</h1>
+</div>
+
 {% leaflet_map "main" callback="main_map_init" settings_overrides=view.settings_overrides %}
     <script type="text/javascript">
 
