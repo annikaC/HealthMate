@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles django_markdown %}
 {% block content %}
-Insert markup for 2 way switch here
+    <div class="contenthead">
+        <h2 class="contenthead-title">I'd like to</h2>
+    </div>
+    <ul class="gate">
+        <li class="gate-route"><a href="" class="btn fontawesome-search">Find a service</a></li>
+        <li class="gate-route"><a href="{% url 'services:create_service' %}" class="btn fontawesome-plus">Add a service</a></li>
+    </ul>
 {% endblock %}

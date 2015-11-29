@@ -10,3 +10,9 @@
 head{
     font-family: pointlist($breakpoints);
 }
+html{
+    background: color(muted);
+}
+body{
+    background: color(white);
+}

@@ -5,16 +5,29 @@
 
 .content-wrapper{
     width: auto;
-    max-width: rem(600);
+    max-width: rem(1000);
     margin: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.marginless{
+    margin-bottom: 0;
 }
 
 .btn{
+    display: block;
+    padding: 1em;
     border: none;
     border-radius: .25rem;
     background: color(link);
     color: color(white);
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
+    &:hover{
+        color: color(white);
+    }
     &--quiet{
         border: .1rem solid color(muted);
         background: transparent;
@@ -22,9 +35,24 @@
     }
 }
 
+.gate{
+    margin: 0;
+    list-style: none;
+    &-route{
+        margin-bottom: 1rem;
+        a{
+            &:before{
+                display: block;
+                font-size: 3em;
+            }
+        }
+    }
+}
+
 .contenthead{
     &-title{
-
+        margin-top: 0;
+        text-align: center;
     }
 }
 

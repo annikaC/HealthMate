@@ -62,4 +62,7 @@ target/
 node_modules/
 static/components/
 static/*.html
+static/styles/*.css
+static/styles/*.css.map
+.sass-cache/
 .vagrant
