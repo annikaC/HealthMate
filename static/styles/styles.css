@@ -783,11 +783,6 @@ form input[type="submit"] {
   .errorlist + textarea {
     border-color: #B30536; }
 
-#id_location_map {
-  overflow: hidden;
-  border: 0.2rem solid #2E6D80;
-  border-radius: .5rem; }
-
 /**
  * Modal
  */
@@ -828,21 +823,33 @@ form input[type="submit"] {
  * Popup
  */
 .leaflet-container {
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 0.2rem solid #2E6D80;
+  border-radius: .5rem;
   font-size: 1em !important; }
+  form .leaflet-container {
+    margin-bottom: 0; }
 
 .leaflet-popup-content-wrapper {
-  border-radius: .25rem !important; }
+  overflow: hidden;
+  padding: 0 !important;
+  border-radius: .5rem !important;
+  box-shadow: 0 0 0.2rem 0 rgba(0, 0, 0, 0.2), 0 1rem rgba(0, 0, 0, 0.2) !important; }
 .leaflet-popup-close-button {
   top: 1rem !important;
   right: 1rem !important;
-  padding: 0 !important; }
+  padding: 0 !important;
+  color: #2E6D80 !important; }
 .leaflet-popup-content {
   margin: 0 !important;
   padding: 2rem; }
   .leaflet-popup-content h2 {
     margin-top: 0;
-    font-size: 1.5em; }
+    text-transform: capitalize;
+    font-size: 1.2em; }
   .leaflet-popup-content p {
+    font-size: 0.75em;
     margin: 0 !important; }
 
 /**
@@ -931,6 +938,9 @@ input[type="submit"] {
   text-align: center;
   transition: .25s ease;
   cursor: pointer; }
+  .btn:before, button:before,
+  input[type="submit"]:before {
+    margin-right: 1rem; }
   .btn:hover, button:hover,
   input[type="submit"]:hover {
     color: #fff;
@@ -1025,5 +1035,8 @@ input[type="submit"] {
           transform: translateX(1rem); }
     .catlist-item:last-child a {
       border-bottom: none; }
+
+.center {
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

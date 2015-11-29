@@ -3,25 +3,40 @@
  */
 
 .leaflet-container{
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: .2rem solid color(calm);
+    border-radius: .5rem;
     font-size: 1em !important;
+    form &{
+        margin-bottom: 0;
+    }
 }
 .leaflet-popup{
     &-content-wrapper{
-        border-radius: .25rem !important;
+        overflow: hidden;
+        padding: 0 !important;
+        border-radius: .5rem !important;
+        box-shadow:
+            0 0 .2rem 0 fade-out(black,.8),
+            0 1rem  fade-out(black,.8) !important;
     }
     &-close-button{
         top: 1rem !important;
         right: 1rem !important;
         padding: 0 !important;
+        color: color(calm) !important;
     }
     &-content{
         margin: 0 !important;
         padding: 2rem;
         h2{
             margin-top: 0;
-            font-size: 1.5em;
+            text-transform: capitalize;
+            font-size: 1.2em;
         }
         p{
+            @include font(small);
             margin: 0 !important;
         }
     }

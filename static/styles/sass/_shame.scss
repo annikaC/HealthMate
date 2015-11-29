@@ -25,6 +25,9 @@
     text-align: center;
     transition: .25s ease;
     cursor: pointer;
+    &:before{
+        margin-right: 1rem;
+    }
     &:hover{
         color: color(white);
         background: color(calm);
@@ -161,4 +164,8 @@
             border-bottom: none;
         }
     }
+}
+
+.center{
+    text-align: center;
 }
