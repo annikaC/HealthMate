@@ -40,6 +40,11 @@ class Service(geo_models.Model):
             'slug': self.slug
         })
 
+    @property
+    def popupContent(self):
+      return '<p>{}</p>'.format(
+          self.name)
+
 
 class ServiceImage(models.Model):
 
