@@ -1,0 +1,28 @@
+/**
+ * Popup
+ */
+
+.leaflet-container{
+    font-size: 1em !important;
+}
+.leaflet-popup{
+    &-content-wrapper{
+        border-radius: .25rem !important;
+    }
+    &-close-button{
+        top: 1rem !important;
+        right: 1rem !important;
+        padding: 0 !important;
+    }
+    &-content{
+        margin: 0 !important;
+        padding: 2rem;
+        h2{
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        p{
+            margin: 0 !important;
+        }
+    }
+}

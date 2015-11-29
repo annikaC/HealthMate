@@ -14,9 +14,8 @@
 .marginless{
     margin-bottom: 0;
 }
-
 .btn{
-    display: block;
+    display: inline-block;
     padding: 1em;
     border: none;
     border-radius: .25rem;
@@ -24,9 +23,11 @@
     color: color(white);
     text-decoration: none;
     text-align: center;
+    transition: .25s ease;
     cursor: pointer;
     &:hover{
         color: color(white);
+        background: color(calm);
     }
     &--quiet{
         border: .1rem solid color(muted);
@@ -39,20 +40,44 @@
     margin: 0;
     list-style: none;
     &-route{
-        margin-bottom: 1rem;
+        margin: 2rem 0;
         a{
+            display: block;
             &:before{
                 display: block;
                 font-size: 3em;
+                transition: transform .25s ease;
             }
+            &:hover{
+                &:before{
+                    transform: translateY(-1rem) rotateZ(5deg);
+                }
+            }
+        }
+    }
+    @include breakpoint(pebble){
+        display: flex;
+        margin-right: -1rem;
+        margin-left: -1rem;
+        &-route{
+            flex: 1 1;
+            margin: 0 1rem;
         }
     }
 }
 
 .contenthead{
+    margin-bottom: 3rem;
+    text-align: center;
+    > *{
+        margin: 0;
+    }
     &-title{
-        margin-top: 0;
-        text-align: center;
+        margin: 0;
+        font-size: 1.5em;
+        + .contenthead-intro{
+            padding-top: 1rem;
+        }
     }
 }
 
