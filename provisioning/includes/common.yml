@@ -14,6 +14,7 @@
    - htop
    - ncdu
    - mosh
+   - gettext
 
 # git packages
 - name: Install git
