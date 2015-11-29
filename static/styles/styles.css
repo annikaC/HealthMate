@@ -986,34 +986,42 @@ input[type="submit"] {
     margin-left: auto; }
 
 .catlist {
-  margin: 0;
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
   list-style: none; }
   .catlist-item {
     margin: 0; }
     .catlist-item a {
       position: relative;
       display: block;
-      padding: 1rem 2rem;
-      border-bottom: 0.1rem solid gray;
+      margin: 0 -2rem;
+      padding: 0 2rem;
       color: #333;
+      text-transform: capitalize;
       text-decoration: none; }
-      .catlist-item a:after {
+      .catlist-item a:before {
         position: absolute;
-        top: 1rem;
+        top: -.25em;
         right: 2rem;
-        width: 1.5em;
-        height: 1.5em;
-        content: '>';
+        width: 2em;
+        height: 2em;
         display: block;
         border-radius: 100%;
         color: #fff;
         background: #B30536;
-        line-height: 1.5em;
+        line-height: 2;
         text-align: center;
         transition: transform .2s ease; }
+      .catlist-item a:after {
+        content: ' ';
+        display: block;
+        height: .3rem;
+        margin: 2rem -2rem;
+        background: linear-gradient(45deg, transparent 48%, gray 48%, gray 52%, transparent 52%) repeat top left/0.3rem 0.3rem; }
       .catlist-item a:hover {
         color: #B30536; }
-        .catlist-item a:hover:after {
+        .catlist-item a:hover:before {
           transform: translateX(1rem); }
     .catlist-item:last-child a {
       border-bottom: none; }

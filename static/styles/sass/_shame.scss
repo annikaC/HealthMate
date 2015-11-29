@@ -106,32 +106,53 @@
 }
 
 .catlist{
-    margin: 0;
+    width: 100%;
+    max-width: 60rem;
+    margin: auto;
     list-style: none;
     &-item{
         margin: 0;
         a{
             @include pos(r);
             display: block;
-            padding: rem(10 20);
-            border-bottom: rem(1) solid color(muted);
-            color: color(default);;
+            margin: 0 -2rem;
+            padding: rem(0 20);
+            color: color(default);
+            text-transform: capitalize;
             text-decoration: none;
-            &:after{
-                @include pos(a, t1rem r2rem);
-                @include setsize(1.5em);
-                content:'>';
+            &:before{
+                position: absolute;
+                top: -.25em;
+                right: 2rem;
+                @include setsize(2em);
                 display: block;
                 border-radius: 100%;
                 color: color(white);
                 background: color(link);
-                line-height: 1.5em;
+                line-height: 2;
                 text-align: center;
                 transition: transform .2s ease;
             }
+            &:after{
+                content:' ';
+                display: block;
+                height: .3rem;
+                margin: 2rem -2rem;
+                background:
+                    linear-gradient(
+                        45deg,
+                        transparent 48%,
+                        color(muted) 48%,
+                        color(muted) 52%,
+                        transparent 52%
+                    )
+                    repeat
+                    top left/.3rem .3rem
+                ;
+            }
             &:hover{
                 color: color(link);
-                &:after{
+                &:before{
                     transform: translateX(1rem);
                 }
             }
