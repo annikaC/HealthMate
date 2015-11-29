@@ -46,6 +46,9 @@ INSTALLED_APPS = (
     'floppyforms',
     'storages',
     'djgeojson',
+    'mptt',
+    'parler',
+    'categories_i18n',
 
     # Local apps
     'healthmate',
