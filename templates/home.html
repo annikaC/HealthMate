@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% load staticfiles django_markdown %}
+{% load staticfiles django_markdown i18n %}
 {% block content %}
     <div class="contenthead">
-        <h1 class="contenthead-title">Your healthmate</h1>
-        <p class="contenthead-intro">Find and recommend local health support services for you, your family and other refugees.</p>
+        <h1 class="contenthead-title">{% trans "Your healthmate" %}</h1>
+        <p class="contenthead-intro">{% trans "Find and recommend local health support services for you, your family and other refugees." %}</p>
     </div>
     <ul class="gate">
-        <li class="gate-route"><a href="{% url 'categories_list' %}" class="btn fontawesome-search">Find a service</a></li>
-        <li class="gate-route"><a href="{% url 'services:create_service' %}" class="btn fontawesome-plus">Add a service</a></li>
+        <li class="gate-route"><a href="{% url 'categories_list' %}" class="btn fontawesome-search">{% trans "Find a service" %}</a></li>
+        <li class="gate-route"><a href="{% url 'services:create_service' %}" class="btn fontawesome-plus">{% trans "Add a service" %}</a></li>
     </ul>
 {% endblock %}
