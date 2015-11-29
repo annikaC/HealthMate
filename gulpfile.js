@@ -17,11 +17,11 @@ var
 
 // Define static assets
 var
-    root = './',
+    root = './static/',
     assets = {
-        markup: root + '/markup/',
-        styles: root + '/styles/',
-        scripts: root + '/scripts/'
+        markup: root + 'markup/',
+        styles: root + 'styles/',
+        scripts: root + 'scripts/'
     }
 ;
 
@@ -73,6 +73,6 @@ gulp.task('watch',function(){
 gulp.task('default', [
     'styles',
     'markup',
-    'watch',
-    'server'
+    'watch'
+    //'server'
 ]);
