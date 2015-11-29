@@ -606,8 +606,10 @@ form {
     border: none; }
 
   label {
-    display: inline-block;
-    margin: 0 0 .25em 0; }
+    font-size: 0.75em;
+    font-weight: bold;
+    display: block;
+    margin: 2rem 0 1rem; }
 
   input,
   textarea,
@@ -615,20 +617,21 @@ form {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    margin: 0;
+    margin: 0 0 2rem;
     color: #333; }
 
   input,
   textarea,
   select[multiple] {
-    padding: 10px 15px;
+    padding: 1rem 2rem;
     border: 1px solid gray;
     border-radius: .5rem; }
 
-  input:not([type="radio"]):not([type="checkbox"]):not([type="range"]),
-  textarea {
-    min-height: 25rem;
+  input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
     -webkit-appearance: none; }
+
+  textarea {
+    min-height: 25rem; }
 
   input[type="checkbox"],
   input[type="radio"] {
@@ -727,19 +730,31 @@ table {
 /**
  * Form
  */
-.fieldgroup {
-  margin-bottom: 2rem; }
-  .fieldgroup:last-of-type {
-    margin-bottom: 0; }
-  .fieldgroup > label {
-    display: block;
-    margin: 0; }
-  .fieldgroup-label {
-    display: block;
-    margin-bottom: .5em;
-    font-weight: bold; }
-  .fieldgroup-input {
-    width: 100%; }
+form > br {
+  display: none; }
+form label {
+  margin-right: -2rem;
+  margin-left: -2rem;
+  padding: 1rem 2rem;
+  border-top: .1rem solid #ccc; }
+form input[type="submit"] {
+  margin-top: 3rem; }
+
+.helptext {
+  font-size: 0.75em;
+  position: relative;
+  display: block;
+  min-height: 1.5em;
+  margin: 2rem 0;
+  padding-left: 3rem; }
+  .helptext:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '\f05a';
+    color: #B30536;
+    font-size: 1.5em;
+    font-family: 'FontAwesome', sans-serif; }
 
 /**
  * Modal
@@ -844,7 +859,8 @@ body {
 .marginless {
   margin-bottom: 0; }
 
-.btn {
+.btn, button,
+input[type="submit"] {
   display: block;
   padding: 1em;
   border: none;
@@ -854,7 +870,8 @@ body {
   text-decoration: none;
   text-align: center;
   cursor: pointer; }
-  .btn:hover {
+  .btn:hover, button:hover,
+  input[type="submit"]:hover {
     color: #fff; }
   .btn--quiet {
     border: 0.1rem solid gray;

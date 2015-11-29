@@ -1,23 +1,32 @@
 /**
  * Form
  */
-
-.fieldgroup{
-    margin-bottom: 2rem;
-    &:last-of-type{
-        margin-bottom: 0;
+form{
+    > br{
+        display: none;
     }
-    > label{
-        display: block;
-        margin: 0;
+    label{
+        margin-right: -2rem;
+        margin-left: -2rem;
+        padding: 1rem 2rem;
+        border-top: .1rem solid #ccc;
     }
-    &-label{
-        display: block;
-        margin-bottom: .5em;
-        font-weight: bold;
-    }
-    &-input{
-        width: 100%;
+    input[type="submit"]{
+        margin-top: 3rem;
     }
 }
-
+.helptext{
+    @include font(small);
+    position: relative;
+    display: block;
+    min-height: 1.5em;
+    margin: 2rem 0;
+    padding-left: 3rem;
+    &:before{
+        @include pos(a,t0 l0);
+        content: '\f05a';
+        color: color(link);
+        font-size: 1.5em;
+        font-family: 'FontAwesome', sans-serif;
+    }
+}
