@@ -67,25 +67,25 @@ msgstr ""
 
 #: Parent Category Items
 msgid "Women's Health"
-msgstr ""
+msgstr "صحة المرأة"
 
 msgid "Emergency"
-msgstr ""
+msgstr "حالة طوارئ"
 
 msgid "Children and Babies"
-msgstr ""
+msgstr "الأطفال و الرضع"
 
 msgid "Sexual Health"
-msgstr ""
+msgstr "الصحة الجنسية"
 
 msgid "Prescriptions"
-msgstr ""
+msgstr "وصفات"
 
 msgid "Mental Health"
-msgstr ""
+msgstr "الصحة العقلية"
 
 msgid "General Advice"
-msgstr ""
+msgstr "نصائح عامة"
 
 
 #: Category Items
