@@ -63,3 +63,95 @@ msgstr ""
 
 msgid "Parent Category"
 msgstr ""
+
+
+#: Parent Category Items
+msgid "Women's Health"
+msgstr "صحة المرأة"
+
+msgid "Emergency"
+msgstr "حالة طوارئ"
+
+msgid "Children and Babies"
+msgstr "الأطفال و الرضع"
+
+msgid "Sexual Health"
+msgstr "الصحة الجنسية"
+
+msgid "Prescriptions"
+msgstr "وصفات"
+
+msgid "Mental Health"
+msgstr "الصحة العقلية"
+
+msgid "General Advice"
+msgstr "نصائح عامة"
+
+
+#: Category Items
+msgid "Pre-Natal Care"
+msgstr "قبل الولادة"
+
+msgid "Post-Natal Care"
+msgstr "حديثي"
+
+msgid "Breastfeeding"
+msgstr "إرضاع طبيعي"
+
+msgid "Incontinence"
+msgstr "سلس البول"
+
+msgid "Thrush"
+msgstr "القلاع"
+
+msgid "Urinary Tract Infection"
+msgstr "إلتهاب المسالك البولية"
+
+msgid "Period Pain"
+msgstr "حيض"
+
+msgid "Menopausal Symptom"
+msgstr "الإياس"
+
+msgid "Need Sanitary Pads"
+msgstr "المنتجات الصحية"
+
+msgid "Contraception"
+msgstr "تنظيم النسل"
+
+msgid "Cold And Flu"
+msgstr "الإنفلونزا"
+
+msgid "Allergies"
+msgstr "حساسية"
+
+msgid "Depression"
+msgstr "اكتئاب"
+
+msgid "Sleep Disorder"
+msgstr "الأرق"
+
+msgid "Alcohol Addiction"
+msgstr "الكحولية"
+
+msgid "Drug Addiction"
+msgstr "إدمان العقاقير"
+
+msgid "Trauma Support"
+msgstr "المشورة الحزن"
+
+msgid "Heart Problems"
+msgstr "شذوذ القلب"
+
+msgid "Sudden Pain"
+msgstr "ألم"
+
+msgid "Injury"
+msgstr "جرح"
+
+msgid "Sexually Transmitted Disease"
+msgstr "الأمراض التناسلية"
+
+msgid "Jaundice"
+msgstr "يرقان"
+
